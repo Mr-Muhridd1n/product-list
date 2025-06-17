@@ -3,12 +3,225 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template</title>
+    <title>Product list</title>
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header"></header>
-    <main class="main"></main>
+    <main class="main">
+      <div class="card_container container">
+        <div class="card__list__wrapper">
+          <h1 class="card__list__title">Desserts</h1>
+          <ul class="card__list">
+            <template id="card__list-template">
+              <li class="card__item">
+                <figure>
+                  <img
+                    id="card__item__image"
+                    src="./images/waffle.jpg"
+                    width="250.67"
+                    height="240"
+                    alt=""
+                  />
+                  <button class="add_to_card">
+                    <img
+                      src="./images/carbon_shopping-cart-plus.svg"
+                      width="20"
+                      height="20"
+                      alt="shopping svg image"
+                    />
+                    <span>Add to Cart</span>
+                  </button>
+                  <div class="add_to_card-active">
+                    <button class="minus-count">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 21 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.3334 2.5C14.4584 2.5 17.8334 5.875 17.8334 10C17.8334 14.125 14.4584 17.5 10.3334 17.5C6.20837 17.5 2.83337 14.125 2.83337 10C2.83337 5.875 6.20837 2.5 10.3334 2.5ZM10.3334 1.25C5.52087 1.25 1.58337 5.1875 1.58337 10C1.58337 14.8125 5.52087 18.75 10.3334 18.75C15.1459 18.75 19.0834 14.8125 19.0834 10C19.0834 5.1875 15.1459 1.25 10.3334 1.25Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M5.33337 9.375H15.3334V10.625H5.33337V9.375Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </button>
+                    <span class="add-count"></span>
+                    <button class="plus-count">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 21 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.3334 2.5C14.4584 2.5 17.8334 5.875 17.8334 10C17.8334 14.125 14.4584 17.5 10.3334 17.5C6.20837 17.5 2.83337 14.125 2.83337 10C2.83337 5.875 6.20837 2.5 10.3334 2.5ZM10.3334 1.25C5.52087 1.25 1.58337 5.1875 1.58337 10C1.58337 14.8125 5.52087 18.75 10.3334 18.75C15.1459 18.75 19.0834 14.8125 19.0834 10C19.0834 5.1875 15.1459 1.25 10.3334 1.25Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M15.3334 9.375H10.9584V5H9.70837V9.375H5.33337V10.625H9.70837V15H10.9584V10.625H15.3334V9.375Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </figure>
+                <div class="card__item__info">
+                  <h4 class="card__item__info-title">Waffle</h4>
+                  <h3 class="card__item__info-description">
+                    Waffle with Berries
+                  </h3>
+                  <span class="card__item__info-price">$6.50</span>
+                </div>
+              </li>
+            </template>
+          </ul>
+        </div>
+        <div class="your__card__wrapper">
+          <h3 class="your__card__title">
+            Your Cart (<span id="card__counter">0</span>)
+          </h3>
+          <div class="your__card__default">
+            <img src="./images/Empty Illustration.png" alt="" />
+            <p class="your__card__default-title">
+              Your added items will appear here
+            </p>
+          </div>
+          <div class="your__card__active">
+            <ul class="your__card__active__list">
+              <template id="your__card__active__list">
+                <li class="your__card__active__item">
+                  <div class="your__card__active__item-wrapper">
+                    <h3 class="your__card__active__title">classs</h3>
+                    <div class="your__card__active-info">
+                      <span class="your__card__active__count">1x</span>
+                      <span class="your__card__active__price-wrapper"
+                        >@
+                        <span class="your__card__active__price">4</span></span
+                      >
+                      <span class="your__card__active__allPrice">4</span>
+                    </div>
+                  </div>
+
+                  <button class="your__card__active__delete">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 1.25C5.125 1.25 1.25 5.125 1.25 10C1.25 14.875 5.125 18.75 10 18.75C14.875 18.75 18.75 14.875 18.75 10C18.75 5.125 14.875 1.25 10 1.25ZM10 17.5C5.875 17.5 2.5 14.125 2.5 10C2.5 5.875 5.875 2.5 10 2.5C14.125 2.5 17.5 5.875 17.5 10C17.5 14.125 14.125 17.5 10 17.5Z"
+                        fill="#AD8A85"
+                      />
+                      <path
+                        d="M13.375 14.375L10 11L6.625 14.375L5.625 13.375L9 10L5.625 6.625L6.625 5.625L10 9L13.375 5.625L14.375 6.625L11 10L14.375 13.375L13.375 14.375Z"
+                        fill="#AD8A85"
+                      />
+                    </svg>
+                  </button>
+                </li>
+                <hr
+                  style="background-color: #f5eeec; height: 1px; border: none"
+                />
+              </template>
+            </ul>
+            <div class="order_total">
+              <h3 class="order_total__title">Order Total</h3>
+              <h2 class="order_total__price" data-price="0">0</h2>
+            </div>
+            <div class="carboon-natural-info">
+              <div>
+                <img
+                  src="./images/carbon_tree.svg"
+                  width="20"
+                  height="20"
+                  alt=""
+                />
+                <p style="font-weight: 400; color: #260f08">
+                  This is a
+                  <span style="font-weight: 600">carbon-neutral</span> delivery
+                </p>
+              </div>
+            </div>
+            <button class="order_conform">Confirm Order</button>
+          </div>
+        </div>
+      </div>
+      <section class="order__confirmed-wrapper">
+        <div class="order__confirmed">
+          <div class="order__confirmed-info">
+            <img
+              class="order__confirmed-info-image"
+              src="./images/carbon_checkmark-outline.svg"
+              width="48"
+              height="48"
+              alt=""
+            />
+            <div class="order__confirmed-info-texts">
+              <h2 class="order__confirmed-info-texts-title">Order Confirmed</h2>
+              <p class="order__confirmed-info-texts-description">
+                We hope you enjoy your food!
+              </p>
+            </div>
+          </div>
+          <div class="order__confirmed-list-wrapper">
+            <ul class="order__confirmed__active__list">
+              <template id="order__confirmed__active__list">
+                <li class="order__confirmed__active__item">
+                  <div class="order__confirmed__active__item-wrapper">
+                    <img
+                      class="order__confirmed__active__image"
+                      width="50"
+                      height="50"
+                      src=""
+                      alt=""
+                    />
+                    <div class="order__confirmed__active__wrapper">
+                      <h3 class="order__confirmed__active__title">classs</h3>
+                      <div class="order__confirmed__active-info">
+                        <span class="order__confirmed__active__count">1x</span>
+                        <span class="order__confirmed__active__price-wrapper"
+                          >@
+                          <span class="order__confirmed__active__price"
+                            >4</span
+                          ></span
+                        >
+                      </div>
+                    </div>
+                    <span class="order__confirmed__active__allPrice">4</span>
+                  </div>
+                </li>
+                <hr
+                  style="
+                    background-color: #f5eeec;
+                    margin-bottom: 16px;
+                    height: 1px;
+                    border: none;
+                  "
+                />
+              </template>
+            </ul>
+            <div class="order_total">
+              <h3 class="order_total__title">Order Total</h3>
+              <h2 class="order_total__price_1" data-price="0">0</h2>
+            </div>
+          </div>
+          <button class="order__confirmed-btn" type="button">
+            Start New Order
+          </button>
+        </div>
+      </section>
+    </main>
     <footer class="footer"></footer>
+
+    <script type="module" src="./js/app.js"></script>
   </body>
 </html>

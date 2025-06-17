@@ -25,12 +25,17 @@ html {
   scroll-behavior: smooth;
   height: 100%;
   font-size: 62.5%;
+  user-select: none;
 }
 
 body {
   display: flex;
+  font-family: "Red Hat Text", sans-serif;
   flex-direction: column;
   height: 100%;
+  background-color: #fcf8f6;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 main {
@@ -43,9 +48,9 @@ h1 {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1276px;
+  padding-left: 3rem;
+  padding-right: 3rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
 }
